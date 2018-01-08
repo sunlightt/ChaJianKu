@@ -1,0 +1,17 @@
+$(window).scroll(function() {
+			var scrollTop = $(this).scrollTop();
+			var scrollHeight = $(document).height();
+			var windowHeight = $(this).height();
+			var positionValue = (scrollTop + windowHeight) - scrollHeight;
+
+			if(positionValue >= 0) {
+                  
+                index++;  
+                var tab=document.createElement('p');
+                tab.style.cssText="font:12px/20px 'Î¢ÈíÑÅºÚ';color:#3333;text-align:center;";
+                tab.innerHTML='²âÊÔÊı¾İ'+index*5;
+                
+                $('.parent').append(tab);
+                
+			}
+		});
