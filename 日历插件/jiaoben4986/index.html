@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>移动端日期和时间选择插件 - 站长素材</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    // date time picker
+    if($(".iDate.full").length>0){
+        $(".iDate.full").datetimepicker({
+            locale: "zh-cn",
+            format: "YYYY-MM-DD a hh:mm",
+            dayViewHeaderFormat: "YYYY年 MMMM"
+        });
+    }
+    if($(".iDate.date").length>0){
+        $(".iDate.date").datetimepicker({
+            locale:"zh-cn",
+            format:"YYYY-MM-DD",
+            dayViewHeaderFormat:"YYYY年 MMMM"
+        });
+    }
+})
+</script>
+
+</head>
+<center>
+<body style="padding: 30px">
+<div class="iDate full">
+	<input type="text">
+	 <button type="button" class="addOn"></button>
+</div>
+<div class="iDate date">
+	<input type="text">
+	 <button type="button" class="addOn"></button>
+</div>
+</center>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
