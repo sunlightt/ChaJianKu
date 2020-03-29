@@ -1,0 +1,19 @@
+// 查找出字符串中出现最多的次数
+		var str = 'abaaaccddaacceeefffffccedasdeddeed';
+		computed(str);
+		function computed(str){
+			var obj = {};
+			replace(str);
+			function replace(str){
+				const len = str.length;
+				const fisrt = str.slice(0,1);
+				const reg = new RegExp(fisrt,'g')
+				const replacestr = str.replace(reg,'')
+				console.log('replacestr',replacestr)
+				obj[fisrt] = len - replacestr.length;
+				if(replacestr.length){
+					replace(replacestr);	
+				}
+			}
+			console.log(obj)
+		}
